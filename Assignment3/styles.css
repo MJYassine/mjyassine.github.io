@@ -27,6 +27,39 @@ body {
     text-align: center;
     color: blanchedalmond;
 }
+
+#ideas{
+    background-color: blanchedalmond;
+    border: 3px solid blueviolet;
+}
+#links{
+    background-color: blanchedalmond;
+    border: 3px solid blueviolet;
+}
+
+#links ul{
+    padding-left: 15px;
+}
+
+#ideas ul {
+    list-style-type: none;
+}
+#ideas ul{
+    padding-left: 5px;
+}
+
+#title {
+    background-color: cyan;
+    border: 3px solid blueviolet;
+}
+
+#title ul {
+    list-style-type: none;
+}
+
+
+
+
 @media screen and (min-width: 700px) {
     #main-nav ul{
         display: flex;
@@ -35,4 +68,44 @@ body {
         flex: 1;
         border: none;
     }
+    #main-info{
+        display: flex;
+    }
+    #links{
+        flex: 1;
+        border-right: 0;
+
+    }
+    #ideas {
+        flex: 4
+    }
+    
+    #ideasideas{
+        display: flex;
+    }
+    #title ul{
+        display: flex;
+    }
+    #titlestitle{
+        flex: 1;
+    }
+    #title{
+        border-top: 0.01px solid blueviolet;
+    }
+
+  }
+  @media screen and (max-width: 700px) {
+    #ideas{
+        background-color: blanchedalmond;
+        border-top: 0.01px solid blueviolet;
+    }
+    #ideasideas img{
+        display: block;
+        margin: 0 auto;
+    }
+    #title {
+        text-align: center;
+        border-top: 0.01px solid blueviolet;
+    }
+    
   }
