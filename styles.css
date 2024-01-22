@@ -1,0 +1,30 @@
+#main-header h1{
+    text-align: center;
+}
+#content {
+    text-align: center;
+}
+
+#assignment {
+    background-color: #c5f9d7;
+}
+#content ul{
+    padding-left: 0px;
+    margin: 0;
+}
+#assignment a {
+    padding-top: 10px;
+}
+body{
+   background-color: angelicwhite;
+   color: #273043;
+}
+@media screen and (min-width: 900px) {
+    #content ul{
+        display: flex;
+    }
+    #assignment{
+        flex: 1;
+        margin: 0 5px;
+    }
+}
