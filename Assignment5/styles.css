@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+}
+body {
+    font-family: "Berlingske Sans", "Arial", sans-serif;
+}
+#TopHeader {
+    background-color: black;
+    color: white;
+}
+#TopList ul {
+    display: inline-flex;
+    list-style: none;
+}
+#TopList li{
+    padding-left: 5px;
+
+}
+#TopList {
+    text-align: right;
+    font-size: 10px;
+}
+#TopList a {
+    text-decoration: none;
+    color: white;
+}
+
+#BottomHeader {
+    background-color: black;
+    color: white;
+}
+#Logo {
+    display: flex;
+    padding-left: 10%;
+}
+#BottomHeader{
+    display: flex;
+}
+
+#Search{
+    text-align: right;
+    flex: 1;
+    padding-right: 10%;
+}
+
+#Search input {
+    padding: 4px 8px;
+    margin-top: 8px;
+}
+#ContentTitle{
+    background-color: #73000A;
+    color: white;
+    padding: 4px 2%;
+}
+
+#SideNav  {
+    flex: 1;
+}
+#MainContent{
+    flex:3;
+}
+#SideNav a {
+    text-decoration: none;
+    color: black;
+}
+#SideNav ul {
+    list-style-type: none;
+    padding-top: 10%;
+}
+#SideNav li {
+    border-top: 1.5px lightgray solid;
+    padding-top: 3%;
+
+}
+#MYCEC{
+    text-align: right;
+}
+#Body{
+    display: flex;
+}
+#MainContent {
+    padding: 5%;
+    text-align: center;
+    border-bottom: 1.5px lightgray solid;
+}
+#MainContentTopImage {
+    max-width: 50%;
+    min-height: 300px;
+}
+#MainContent h1{
+    color:#73000A;
+    text-align: left;
+}
+
+#MainContent p{
+    text-align: left;
+}
+
+
+
+
