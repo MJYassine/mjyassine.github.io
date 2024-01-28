@@ -1,9 +1,8 @@
 * {
     margin: 0;
-}
-body {
     font-family: "Berlingske Sans", "Arial", sans-serif;
 }
+
 #TopHeader {
     background-color: black;
     color: white;
@@ -55,8 +54,9 @@ body {
 
 #SideNav  {
     flex: 1;
+    max-width: 250px;
 }
-#MainContent{
+#Content{
     flex:3;
 }
 #SideNav a {
@@ -84,7 +84,7 @@ body {
     border-bottom: 1.5px lightgray solid;
 }
 #MainContentTopImage {
-    max-width: 50%;
+    max-width: 80%;
     min-height: 300px;
 }
 #MainContent h1{
@@ -96,6 +96,234 @@ body {
     text-align: left;
 }
 
+#Highlight {
+   display: flex;
+   padding-bottom: 10px;
+   border-bottom: 1px lightgray solid;
+   padding-top: 10px;
+
+}
+#DepartmentHighlights h3 {
+    padding-bottom: 10px;
+}
+
+#Stats {
+    border: 1px lightgray solid;
+    border-left: 3px #73000A solid;
+}
+
+#StatText {
+    padding-left: 8px;
+}
+
+#Stats h3 {
+    padding-top: 5px;
+    padding-bottom: 1px;
+    font-size: 15px;
+    font-weight: lighter;
+    color: gray;
+}
+
+#Stats h2 {
+    font-size: 21px;
+    color: #73000A;
+}
+
+#Stats h1 {
+    font-size: 34px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #73000A;
+    font-weight: bolder;
+}
+
+#Stats p {
+    padding-bottom: 3px;
+}
+
+#Donate h1 {
+    font-size: 21px;
+    color: #73000A;
+}
+#Donate h2 {
+    font-size: 15px;
+    color: gray;
+}
+#Donate {
+    border: 1px lightgray solid;
+    border-left: 3px #73000A solid;
+    margin-top: 50px;
+    padding-left: 6px;
+    background-color: #ECECEC;
+}
+#Donate a {
+    padding-left: 10px;
+    text-decoration: none;
+    color: #73000A;
+}
+#SubContent {
+    display: flex;
+}
+
+#SideBoxes {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#Stats {
+    margin-top: 10px;
+}
+#Highlight img{
+    padding-right: 5px;
+}
+
+#TopFooter{
+    margin-top: 15%;
+    background-color: #ECECEC;
+}
+
+#TopFooter ul{
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+}
+
+#TopFooterRight a{
+    padding-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+
+#FooterLogo {
+    display: flex;
+}
+#LogoandSocials {
+    background-color: #73000A;
+}
+
+#TopFooter h1 {
+    font-size: 20px;
+}
+
+#OtherLinks {
+    background-color: #73000A;
+    color: white;
+}
+#List {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+#List ul {
+    list-style: none;
+    border-top: 1px white solid;
+    padding-top: 10px;
+}
+#List li {
+    padding-top: 5px;
+}
+#List a {
+    text-decoration: none;
+    color: white;
+}
+
+#BottomFooter{
+    background-color: black;
+    border-top: 1.5px white solid;
+    color: white;
+    padding-top: 5px;
+    text-align: center;
+}
+
+#BottomFooter ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+
+#BottomFooter a {
+    color:white;
+    font-size: 10px;
+}
+#BottomFooter p {
+    color:white;
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
 
 
 
+
+@media screen and (max-width: 900px) {
+    #SubContent {
+        display: inline;
+        margin-left: none;
+    }
+    #Donate {
+        margin-top: 20px;
+    }
+    #Stats {
+        margin-top: 20px;
+    }
+    #DonateImage {
+        float: right;
+        padding: 5%;
+    }
+    #TopFooter {
+        padding-top: 5px;
+    }
+    #LogoandSocials {
+        text-align: center;
+    }
+    #FooterLogo {
+        padding-left: 35%;
+    }
+    #TopFooter h1 {
+        margin-left: 1%;
+    }
+    #List {
+        padding-bottom: 5%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #TopFooter {
+        margin-top: 10%;
+        background-color: #ECECEC ;
+        display: flex;
+        
+    }
+
+    #TopFooter h1{
+        flex: 1;
+    }
+    #TopFooterRight ul {
+        padding-top: 4%;
+    }
+    #TopFooterRight {
+        margin-right: 5%;
+    }
+    #TopFooter h1 {
+        margin-left: 5%;
+    }
+    #LogoandSocials{
+        display: flex;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    #FooterLogo {
+        flex: 1;
+    }
+    #Socials img {
+        padding-right: 10px;
+    }
+    #OtherLinks {
+        display: flex;
+    }
+    #List {
+        flex: 1;
+        padding-bottom: 3%;
+    }
+}
