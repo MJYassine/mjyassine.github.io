@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Tree Information</title>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Assignment 11</h1>
+    <h2>Classes</h2>
+    <div class="row">
+        <div class="tree" onclick="showTreeInfo(0)">
+            <p>Bald Cypress</p>
+            <img src="images/bald_cypress.jpeg" alt="Tree 1">
+        </div>
+        <div class="tree" onclick="showTreeInfo(1)">
+            <p>Eastern Redbud</p>
+            <img src="images/eastern_redbud.jpeg" alt="Tree 2">
+        </div>
+        <div class="tree" onclick="showTreeInfo(2)">
+            <p>Loblolly Pine</p>
+            <img src="images/loblolly_pine.jpeg" alt="Tree 3">
+        </div>
+        <div class="tree" onclick="showTreeInfo(3)">
+            <p>Southern Magnolia</p>
+            <img src="images/southern_magnolia.jpeg" alt="Tree 4">
+        </div>
+    </div>
+</div>
+
+<div id="treeModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-text" id="treeInfo"></div>
+       
+        <span class="close" onclick="closeTreeModal()">&times;</span>
+        <div class="modal-image">
+            <img id="treeImage" src="" alt="">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
