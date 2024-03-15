@@ -1,0 +1,68 @@
+*{
+    background-color: blanchedalmond;
+    color: black;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+  }
+  
+  header {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .house {
+    border: 1px solid #ccc;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    overflow: hidden;
+    background-color: aqua;
+  }
+  .house h2, p {
+    background-color: aqua; 
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  .house img.main-image {
+    float: left;
+    width: 50%;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .house .description {
+    float: right;
+    width: calc(50% - 20px);
+  }
+  
+  .house::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  .floor-plans {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background-color: aqua;
+
+  }
+  
+  .floor-plan {
+    width: 49%;
+    margin-bottom: 1rem;
+    background-color: aqua;
+  }
+  
+  .floor-plan img {
+    width: 100%;
+    height: auto;
+  }
+  .floor-plan p {
+    background-color: aqua;
+
+  }
+  
