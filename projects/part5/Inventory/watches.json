@@ -24,7 +24,7 @@
       },
       {
         "_id": 3,
-        "img_name": "Images/submariner.jpeg",
+        "img_name": "Images/Submariner.jpeg",
         "Material": "Stainless steel",
         "Dial Color": "Black",
         "Bracelet": "Oyster",
@@ -46,7 +46,7 @@
       },
       {
         "_id": 5,
-        "img_name": "Images/Explorer.webp",
+        "img_name": "Images/explorer.webp",
         "Material": "Stainless steel",
         "Dial Color": "White",
         "Bracelet": "Oyster",
@@ -68,7 +68,7 @@
       },
       {
         "_id": 7,
-        "img_name": "Images/Yachtmaster.jpeg",
+        "img_name": "Images/YachtMaster.jpeg",
         "Material": "Stainless steel",
         "Dial Color": "Black",
         "Bracelet": "Oysterflex",
