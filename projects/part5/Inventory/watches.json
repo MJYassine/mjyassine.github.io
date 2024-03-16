@@ -2,7 +2,7 @@
     "watches": [
       {
         "_id": 1,
-        "img_name": "images/daytona.jpeg",
+        "img_name": "Images/daytona.jpeg",
         "Material": "Stainless steel",
         "Dial Color": "Black",
         "Bracelet": "Oyster",
@@ -13,7 +13,7 @@
       },
       {
         "_id": 2,
-        "img_name": "images/datejust.jpeg",
+        "img_name": "Images/datejust.jpeg",
         "Material": "Gold plated",
         "Dial Color": "Champagne",
         "Bracelet": "Jubilee",
@@ -24,7 +24,7 @@
       },
       {
         "_id": 3,
-        "img_name": "images/submariner.jpeg",
+        "img_name": "Images/submariner.jpeg",
         "Material": "Stainless steel",
         "Dial Color": "Black",
         "Bracelet": "Oyster",
@@ -35,7 +35,7 @@
       },
       {
         "_id": 4,
-        "img_name": "images/rolex.jpeg",
+        "img_name": "Images/rolex.jpeg",
         "Material": "Yellow gold",
         "Dial Color": "Silver",
         "Bracelet": "Leather strap",
@@ -46,7 +46,7 @@
       },
       {
         "_id": 5,
-        "img_name": "images/Explorer.webp",
+        "img_name": "Images/Explorer.webp",
         "Material": "Stainless steel",
         "Dial Color": "White",
         "Bracelet": "Oyster",
@@ -57,7 +57,7 @@
       },
       {
         "_id": 6,
-        "img_name": "images/SkyDweller.jpeg",
+        "img_name": "Images/SkyDweller.jpeg",
         "Material": "Stainless steel and white gold",
         "Dial Color": "Blue",
         "Bracelet": "Jubilee",
@@ -68,7 +68,7 @@
       },
       {
         "_id": 7,
-        "img_name": "images/Yachtmaster.jpeg",
+        "img_name": "Images/Yachtmaster.jpeg",
         "Material": "Stainless steel",
         "Dial Color": "Black",
         "Bracelet": "Oysterflex",
@@ -79,7 +79,7 @@
       },
       {
         "_id": 8,
-        "img_name": "images/Cosmograph.jpeg",
+        "img_name": "Images/Cosmograph.jpeg",
         "Material": "Everose gold",
         "Dial Color": "Black",
         "Bracelet": "Oysterflex",
