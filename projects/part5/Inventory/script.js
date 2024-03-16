@@ -61,7 +61,7 @@ const displayWatches = async () => {
           watchesContainer.appendChild(watchEl);
       });
   } catch (error) {
-      console.error('Failed to load watches:', error);
+      console.error('Failed to load watches :', error);
   }
 };
 
