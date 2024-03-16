@@ -24,7 +24,7 @@ body {
   }
 
   #Sell {
-    margin-left: auto; /* Push the button to the right */
+    margin-left: auto; 
 }
   .topnav a {
     color: white;
@@ -52,60 +52,58 @@ body {
     text-align: center;
     border-bottom: 2px black solid;
   }
-/* Container for all watches */
 #watchesContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Space between watch items */
+  gap: 20px; 
   padding: 20px;
 }
 
-/* Individual watch section styling */
 .inventoryWatch {
-  flex-basis: calc(33.333% - 20px); /* Three items per row, accounting for the gap */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow for depth */
-  border-radius: 5px; /* Slightly rounded corners */
-  overflow: hidden; /* Ensures content respects border radius */
-  background: #f9f9f9; /* Light background */
+  flex-basis: calc(33.333% - 20px); 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+  border-radius: 5px; 
+  overflow: hidden; 
+  background: #f9f9f9;
 }
 
 .inventoryWatch img {
-  width: 100%; /* Ensure image covers the width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensures images cover the area nicely */
+  width: 100%; 
+  height: auto;
+  object-fit: cover; 
 }
 
 #Info {
   padding: 15px;
-  text-align: center; /* Center the text for a cleaner look */
+  text-align: center;
 }
 
 #Info h3 {
   margin-top: 0;
-  font-size: 1.2em; /* Slightly larger font for the watch name */
+  font-size: 1.2em; 
 }
 
 #Info p {
-  margin: 5px 0; /* Add some spacing between paragraphs */
-  font-size: 0.9em; /* Subtle size for details */
+  margin: 5px 0;
+  font-size: 0.9em;
 }
 
 #Sell {
-  text-align: center; /* Center the sell button */
+  text-align: center; 
   padding: 10px;
-  background: #eee; /* Slightly different background for the action area */
+  background: #eee;
 }
 
 #Sell button {
   padding: 10px 20px;
   border: none;
-  border-radius: 5px; /* Rounded corners for the button */
-  background: #333; /* Dark background for contrast */
-  color: #fff; /* Light text for readability */
-  cursor: pointer; /* Cursor indicates the button is clickable */
-  transition: background 0.3s; /* Smooth background color transition on hover */
+  border-radius: 5px;
+  background: #333;
+  color: #fff; 
+  cursor: pointer;
+  transition: background 0.3s; 
 }
 
 #Sell button:hover {
-  background: #555; /* Slightly lighter background on hover for feedback */
+  background: #555; 
 }

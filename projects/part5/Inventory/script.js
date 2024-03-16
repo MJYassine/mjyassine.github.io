@@ -17,7 +17,7 @@ const displayWatches = async () => {
           watchEl.classList.add('inventoryWatch');
 
           const img = document.createElement('img');
-          img.src = watch.img_name || 'path/to/placeholder-image.jpg'; // Use a placeholder if img_name is blank
+          img.src = watch.img_name; 
           img.alt = `Image of ${watch.name}`;
           watchEl.appendChild(img);
 
@@ -65,10 +65,7 @@ const displayWatches = async () => {
   }
 };
 
-// Use window.onload to call the function when the page loads
 window.onload = () => displayWatches();
 
 
-// Use window.onload to call the function when the page loads
-window.onload = () => displayWatches();
 
