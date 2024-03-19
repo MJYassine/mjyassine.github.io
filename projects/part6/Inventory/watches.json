@@ -1,0 +1,93 @@
+{
+    "watches": [
+      {
+        "_id": 1,
+        "img_name": "Images/daytona.jpeg",
+        "Material": "Stainless steel",
+        "Dial Color": "Black",
+        "Bracelet": "Oyster",
+        "name": "Rolex Daytona",
+        "price": "$12,000",
+        "year": "2020",
+        "condition": "New"
+      },
+      {
+        "_id": 2,
+        "img_name": "Images/datejust.jpeg",
+        "Material": "Gold plated",
+        "Dial Color": "Champagne",
+        "Bracelet": "Jubilee",
+        "name": "Rolex Datejust",
+        "price": "$8,000",
+        "year": "2018",
+        "condition": "Pre-owned"
+      },
+      {
+        "_id": 3,
+        "img_name": "Images/Submariner.jpeg",
+        "Material": "Stainless steel",
+        "Dial Color": "Black",
+        "Bracelet": "Oyster",
+        "name": "Rolex Submariner",
+        "price": "$10,000",
+        "year": "2021",
+        "condition": "New"
+      },
+      {
+        "_id": 4,
+        "img_name": "Images/rolex.jpeg",
+        "Material": "Yellow gold",
+        "Dial Color": "Silver",
+        "Bracelet": "Leather strap",
+        "name": "Vintage Rolex",
+        "price": "$15,000",
+        "year": "1960",
+        "condition": "Pre-owned"
+      },
+      {
+        "_id": 5,
+        "img_name": "Images/explorer.webp",
+        "Material": "Stainless steel",
+        "Dial Color": "White",
+        "Bracelet": "Oyster",
+        "name": "Rolex Explorer",
+        "price": "$6,550",
+        "year": "2019",
+        "condition": "New"
+      },
+      {
+        "_id": 6,
+        "img_name": "Images/SkyDweller.jpeg",
+        "Material": "Stainless steel and white gold",
+        "Dial Color": "Blue",
+        "Bracelet": "Jubilee",
+        "name": "Rolex Sky-Dweller",
+        "price": "$17,150",
+        "year": "2020",
+        "condition": "New"
+      },
+      {
+        "_id": 7,
+        "img_name": "Images/YachtMaster.jpeg",
+        "Material": "Stainless steel",
+        "Dial Color": "Black",
+        "Bracelet": "Oysterflex",
+        "name": "Rolex Yacht-Master",
+        "price": "$21,000",
+        "year": "2021",
+        "condition": "New"
+      },
+      {
+        "_id": 8,
+        "img_name": "Images/Cosmograph.jpeg",
+        "Material": "Everose gold",
+        "Dial Color": "Black",
+        "Bracelet": "Oysterflex",
+        "name": "Rolex Cosmograph Daytona",
+        "price": "$29,700",
+        "year": "2021",
+        "condition": "New"
+      }
+    ]
+  }
+  

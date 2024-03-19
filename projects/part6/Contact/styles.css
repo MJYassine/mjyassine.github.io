@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  .topnav #nav {
+    display: none;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .icon {
+    text-align: center;
+  }
+  #nav a {
+    text-align: center;
+  }
+  #title{
+    text-align: center;
+  }
+  #title h2 {
+    text-align: center;
+    border-bottom: 2px black solid;
+  }
+  #submit {
+    margin-top: 15px;
+  }
+  #comment {
+    width: 80%;
+    max-width: 500px;
+    height: 100px;
+  }
+
+
+  #numberandemail p {
+    text-align: left;
+  }
+
+  @media (min-width: 900px) {
+    #content {
+      display: flex;
+    }
+    #comments {
+      flex: 1;
+    }
+    #numberandemail {
+      flex: 1;
+    }
+    
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    gap: 15px;
+    text-align: center;
+  }
+  form p {
+    padding-bottom: none;
+  }
+  
+  input, textarea {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .h-captcha {
+    margin-bottom: 15px; /* Adjust spacing around the captcha as needed */
+  }
+  
+  #formFeedback {
+    margin-top: 15px;
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+  

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Mehdi Yassine CSCE 242-->
+<html>
+    <head>
+        <title>Assignment7</title>
+        <link rel="stylesheet" href="Contact/styles.css" />
+        <script src="Contact/script.js"></script>
+    </head>
+    <header id="title">
+        <h1>Watches Galore</h1>
+    </header>
+    <header id="menu">
+        <div class="topnav">
+            <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
+                <h1>Contact</h1>
+            </a>
+            <div id="nav">
+              <a href="index.html">Home</a>
+              <a href="Inventory.html">Inventory</a>
+              <a href="Orders.html">Current and Past Orders</a>
+              <a href="About.html">About Us</a>
+            </div>
+            </a>
+          </div>    
+    </header>
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+        <input type="hidden" name="access_key" value="89f8c820-32f3-4783-8cf9-71a0971c9ee1">
+    
+        <p>Name:</p>
+        <input type="text" name="name" required>
+
+        <p>Email:</p>
+        <input type="email" name="email" required>
+
+        <p>Message:</p>
+        <textarea name="message" required></textarea>
+    
+        <div class="h-captcha" data-captcha="true"></div>
+    
+        <button type="submit">Submit Form</button>
+    
+    </form>
+      
+</html>
