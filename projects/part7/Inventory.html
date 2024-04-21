@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- Mehdi Yassine CSCE 242-->
+<html>
+    <head>
+        <title>Assignment7</title>
+        <link rel="stylesheet" href="Inventory/styles.css" />
+    </head>
+    <body>
+        <header id="title">
+            <h1>Watches Galore</h1>
+        </header>
+        <header id="menu">
+            <div class="topnav">
+                <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
+                    <h1>Inventory</h1>
+                </a>
+                <div id="nav">
+                  <a href="index.html">Home</a>
+                  <a href="Inventory.html">Inventory</a>
+                  <a href="Orders.html">Current and Past Orders</a>
+                  <a href="Contact.html">Contact</a>
+                  <a href="About.html">About Us</a>
+                </div>
+            </div>    
+        </header>
+        <main id="content">
+            <div class="button-container">
+                <button id="addWatchBtn">Add New Watch</button>
+              </div>            
+            <div id="watchesContainer"></div> 
+
+            <div id="watchModal" class="modal">
+              <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <form id="addWatchForm">
+                  <h2>Add New Watch</h2>
+
+                  <label for="watchName">Name:</label>
+                  <input type="text" id="watchName" name="watchName" required>
+
+                  <label for="watchMaterial">Material:</label>
+                  <input type="text" id="watchMaterial" name="watchMaterial" required>
+
+                  <label for="watchDial">Dial Color:</label>
+                  <input type="text" id="watchDial" name="watchDial" required>
+
+                  <label for="watchBracelet">Bracelet:</label>
+                  <input type="text" id="watchBracelet" name="watchBracelet" required>
+
+                  <label for="watchPrice">Price:</label>
+                  <input type="text" id="watchPrice" name="watchPrice" required pattern="^\$\d+(,\d{3})*(\.\d{2})?$" title="Price format: $XX.XX">
+
+                  <label for="watchYear">Year:</label>
+                  <input type="number" id="watchYear" name="watchYear" required min="1900" max="2099" step="1">
+
+                  <button type="submit" class="submitBtn">Submit</button>
+                </form>
+              </div>
+            </div>
+            <div id="editWatchModal" class="modal">
+              <div class="modal-content">
+                <span class="close-edit-btn">&times;</span>
+                <form id="editWatchForm">
+                  <h2>Edit Watch</h2>
+            
+                  <input type="hidden" id="editWatchId">
+                  
+                  <label for="editWatchName">Name:</label>
+                  <input type="text" id="editWatchName" name="watchName" required>
+            
+                  <label for="editWatchMaterial">Material:</label>
+                  <input type="text" id="editWatchMaterial" name="watchMaterial" required>
+            
+                  <label for="editWatchDial">Dial Color:</label>
+                  <input type="text" id="editWatchDial" name="watchDial" required>
+            
+                  <label for="editWatchBracelet">Bracelet:</label>
+                  <input type="text" id="editWatchBracelet" name="watchBracelet" required>
+            
+                  <label for="editWatchPrice">Price:</label>
+                  <input type="text" id="editWatchPrice" name="watchPrice" required pattern="^\$\d+(,\d{3})*(\.\d{2})?$" title="Price format: $XX.XX">
+            
+                  <label for="editWatchYear">Year:</label>
+                  <input type="number" id="editWatchYear" name="watchYear" required min="1900" max="2099" step="1">
+            
+                  <button type="submit" class="submitBtn">Update</button>
+                </form>
+              </div>
+            </div>
+            
+        </main>
+    </body>
+    <script src="Inventory/script.js"></script>
+</html>

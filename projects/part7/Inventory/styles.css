@@ -1,0 +1,202 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #nav {
+  display: none;
+}
+
+#inventoryWatch img {
+  width: 100px;
+  height: 100px;
+}
+
+#inventoryWatch {
+  align-items: center;
+}
+
+#Info {
+  flex: 4;
+}
+
+#Sell {
+  margin-left: auto;
+}
+
+.topnav a {
+  color: white;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+}
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.icon {
+  text-align: center;
+}
+
+#nav a {
+  text-align: center;
+}
+
+#title {
+  text-align: center;
+}
+
+#content h2 {
+  text-align: center;
+  border-bottom: 2px black solid;
+}
+
+#watchesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.inventoryWatch {
+  flex-basis: calc(33.333% - 20px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+}
+
+.inventoryWatch img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+#Info {
+  padding: 15px;
+  text-align: center;
+  flex: 1;
+}
+
+#Info h3, #Info p {
+  margin: 5px 0;
+}
+
+#Info h3 {
+  font-size: 1.2em;
+}
+
+#Info p {
+  font-size: 0.9em;
+}
+
+#Sell {
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  background: #eee;
+  width: 100%; 
+}
+
+#Sell button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-sizing: border-box; 
+}
+
+
+#Sell button:hover {
+  background: #555;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 450px;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input[type=text], input[type=number], .submitBtn {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submitBtn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background-color: #45a049;
+}
+
+#addWatchBtn {
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button-container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+.edit-btn {
+  margin-left: 10px;  
+}
+
