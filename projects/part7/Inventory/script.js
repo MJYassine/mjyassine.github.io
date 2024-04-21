@@ -97,45 +97,66 @@ if (event.target == modal) {
 }
 
 document.getElementById('addWatchForm').onsubmit = async function(e) {
-e.preventDefault();
-const form = e.target;
-const formData = new FormData(form);
+  e.preventDefault();
+  const form = e.target;
+  const formData = new FormData(form);
 
-try {
-    const response = await fetch('/watches', {
-        method: 'POST',
-        body: formData, // No need to set Content-Type header
-    });
+  let price = formData.get('price').replace(/[^\d.-]/g, '');
+  formData.set('price', price);  
 
-    if (response.ok) {
-        console.log("Watch added successfully!");
-        form.reset(); // Reset form after successful submission
-        modal.style.display = 'none'; // Hide modal
-    } else {
-        throw new Error('Failed to add watch');
-    }
-} catch (err) {
-    console.error(err.message);
-}
+  try {
+      const response = await fetch('/watches', {
+          method: 'POST',
+          body: formData,  
+      });
+
+      if (response.ok) {
+          console.log("Watch added successfully!");
+          form.reset();  
+          modal.style.display = 'none'; 
+          displayWatches(); 
+      } else {
+          throw new Error('Failed to add watch');
+      }
+  } catch (err) {
+      console.error(err.message);
+  }
 };
 
 function loadEditModal(watch) {
-document.getElementById('editWatchId').value = watch._id;
-document.getElementById('editWatchName').value = watch.name;
-document.getElementById('editWatchMaterial').value = watch.material;
-document.getElementById('editWatchDial').value = watch.dialColor;
-document.getElementById('editWatchBracelet').value = watch.bracelet;
-document.getElementById('editWatchPrice').value = watch.price;
-document.getElementById('editWatchYear').value = watch.year;
+  document.getElementById('editWatchId').value = watch._id;
+  document.getElementById('editWatchName').value = watch.name;
+  document.getElementById('editWatchMaterial').value = watch.material;
+  document.getElementById('editWatchDial').value = watch.dialColor;
+  document.getElementById('editWatchBracelet').value = watch.bracelet;
+  document.getElementById('editWatchPrice').value = watch.price;
+  document.getElementById('editWatchYear').value = watch.year;
 
-document.getElementById('editWatchModal').style.display = 'block';
+  document.getElementById('editWatchModal').style.display = 'block';
 }
-var editModal = document.getElementById('editWatchModal');
-var closeEditBtn = document.getElementsByClassName('close-edit-btn')[0];
 
-closeEditBtn.onclick = function() {
-editModal.style.display = 'none';
-}
+document.getElementById('editWatchForm').onsubmit = async function(e) {
+  e.preventDefault();
+  const watchId = document.getElementById('editWatchId').value;
+  const formData = new FormData(this);
+
+  try {
+      const response = await fetch(`/watches/${watchId}`, {
+          method: 'PUT',
+          body: formData,  
+      });
+
+      if (response.ok) {
+          console.log("Watch updated successfully!");
+          document.getElementById('editWatchModal').style.display = 'none';
+          displayWatches();  
+      } else {
+          throw new Error('Failed to update watch');
+      }
+  } catch (err) {
+      console.error(err.message);
+  }
+};
 
 window.onclick = function(event) {
 if (event.target == editModal) {

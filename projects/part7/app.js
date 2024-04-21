@@ -42,7 +42,7 @@ app.get('/api/watches', async (req, res) => {
     }
 });
 
-app.post('/watches', upload.single('watchImage'), async (req, res) => {
+app.post('/watches', upload.single('image'), async (req, res) => {
     try {
         const watchData = {
             name: req.body.name,
@@ -63,7 +63,7 @@ app.post('/watches', upload.single('watchImage'), async (req, res) => {
     }
 });
 
-app.put('/watches/:id', upload.single('watchImage'), async (req, res) => {
+app.put('/watches/:id', upload.single('image'), async (req, res) => {
     try {
         const updateData = {
             name: req.body.name,
