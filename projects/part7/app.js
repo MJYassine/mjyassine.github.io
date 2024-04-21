@@ -64,17 +64,14 @@ app.post('/watches', upload.single('image'), async (req, res) => {
 });
 
 app.put('/watches/:id', upload.single('image'), async (req, res) => {
-    try {
-        const updateData = {
-            name: req.body.name,
-            dialColor: req.body.dialColor,
-            material: req.body.material,
-            bracelet: req.body.bracelet,
-            price: req.body.price,
-            year: req.body.year,
-            image: req.file ? req.file.path : null
-        };
+    const { name, dialColor, material, bracelet, year, image } = req.body;
+    let { price } = req.body;
 
+    price = parseFloat(price.replace(/[^\d.]/g, ''));
+
+    const updateData = { name, dialColor, material, bracelet, price, year, image: req.file ? req.file.path : null };
+
+    try {
         const watch = await Watch.findByIdAndUpdate(req.params.id, updateData, { new: true });
         if (!watch) {
             return res.status(404).json({ message: "Watch not found" });
@@ -85,6 +82,7 @@ app.put('/watches/:id', upload.single('image'), async (req, res) => {
         res.status(500).send(err.message);
     }
 });
+
 
 app.delete('/watches/:id', async (req, res) => {
     try {

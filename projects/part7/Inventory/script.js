@@ -129,7 +129,7 @@ function loadEditModal(watch) {
   document.getElementById('editWatchMaterial').value = watch.material;
   document.getElementById('editWatchDial').value = watch.dialColor;
   document.getElementById('editWatchBracelet').value = watch.bracelet;
-  document.getElementById('editWatchPrice').value = watch.price;
+  document.getElementById('editWatchPrice').value = '$' + watch.price;
   document.getElementById('editWatchYear').value = watch.year;
 
   document.getElementById('editWatchModal').style.display = 'block';
@@ -137,19 +137,24 @@ function loadEditModal(watch) {
 
 document.getElementById('editWatchForm').onsubmit = async function(e) {
   e.preventDefault();
-  const watchId = document.getElementById('editWatchId').value;
-  const formData = new FormData(this);
+  const form = e.target;
+  const formData = new FormData(form);
+
+  let price = formData.get('price').replace(/[^\d.]/g, '');
+  formData.set('price', price);  
+
+  const watchId = formData.get('editWatchId'); 
 
   try {
       const response = await fetch(`/watches/${watchId}`, {
           method: 'PUT',
-          body: formData,  
+          body: formData, 
       });
 
       if (response.ok) {
           console.log("Watch updated successfully!");
-          document.getElementById('editWatchModal').style.display = 'none';
           displayWatches();  
+          document.getElementById('editWatchModal').style.display = 'none'; 
       } else {
           throw new Error('Failed to update watch');
       }
@@ -157,6 +162,7 @@ document.getElementById('editWatchForm').onsubmit = async function(e) {
       console.error(err.message);
   }
 };
+
 
 window.onclick = function(event) {
 if (event.target == editModal) {
