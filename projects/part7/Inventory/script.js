@@ -96,24 +96,29 @@ window.onclick = function(event) {
   }
 }
 
-document.getElementById('addWatchForm').onsubmit = function(e) {
+document.getElementById('addWatchForm').onsubmit = async function(e) {
   e.preventDefault();
+  const form = e.target;
+  const formData = new FormData(form);
 
-  var successMessage = document.createElement('div');
-  successMessage.textContent = "Watch added successfully!";
-  successMessage.style.color = "green";
-  successMessage.style.textAlign = "center";
-  successMessage.style.padding = "10px 0";
-  successMessage.style.fontSize = "16px";
-this.appendChild(successMessage);
+  try {
+      const response = await fetch('/watches', {
+          method: 'POST',
+          body: formData, // No need to set Content-Type header
+      });
 
-setTimeout(() => {
-  modal.style.display = 'none';
-  successMessage.remove();
-  this.reset();
-}, 2000);
+      if (response.ok) {
+          console.log("Watch added successfully!");
+          form.reset(); // Reset form after successful submission
+          modal.style.display = 'none'; // Hide modal
+      } else {
+          throw new Error('Failed to add watch');
+      }
+  } catch (err) {
+      console.error(err.message);
+  }
+};
 
-}
 function loadEditModal(watch) {
   document.getElementById('editWatchId').value = watch._id;
   document.getElementById('editWatchName').value = watch.name;
