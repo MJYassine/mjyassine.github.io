@@ -6,10 +6,11 @@ function menuFunction() {
       menu.style.display = "block";
     }
 }
+
 const displayWatches = async () => {
   try {
-      const response = await fetch('Inventory/watches.json'); 
-      const data = await response.json();
+    const response = await fetch('/api/watches');
+    const watches = await response.json(); 
 
       const watchesContainer = document.getElementById('watchesContainer');
       data.watches.forEach((watch) => {
