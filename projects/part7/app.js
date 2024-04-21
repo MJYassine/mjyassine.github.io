@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.json());
 
-const mongoURI = "your_mongodb_connection_string_here";
+const mongoURI = "mongodb+srv://finalProject:pleaseWork@mjyassine.47j07gl.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connection successful'))
   .catch((err) => console.error('MongoDB connection error:', err));
