@@ -4,8 +4,11 @@ const multer = require('multer');
 const Watch = require('./models/watch');
 
 const app = express();
+const path = require('path');
 
-app.use(express.json());
+app.use(express.static(path.join(__dirname)));
+
+
 
 const mongoURI = "mongodb+srv://finalProject:pleaseWork@mjyassine.47j07gl.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
