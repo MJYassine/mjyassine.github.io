@@ -103,18 +103,6 @@ app.delete('/watches/:id', async (req, res) => {
     }
 });
 
-app.delete('/watches/:id', async (req, res) => {
-    try {
-        const result = await Watch.findByIdAndDelete(req.params.id);
-        if (!result) {
-            return res.status(404).send('Watch not found');
-        }
-        res.send('Watch deleted successfully');
-    } catch (err) {
-        console.error(err);
-        res.status(500).send(err.message);
-    }
-});
 
 
 const PORT = process.env.PORT || 3001;

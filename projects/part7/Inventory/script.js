@@ -137,7 +137,7 @@ function loadEditModal(watch) {
   document.getElementById('editWatchBracelet').value = watch.bracelet;
   document.getElementById('editWatchPrice').value = '$' + watch.price;
   document.getElementById('editWatchYear').value = watch.year;
-
+  document.getElementById('editWatchImage').value = null;  
   document.getElementById('editWatchModal').style.display = 'block';
 }
 
