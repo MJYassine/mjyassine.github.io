@@ -44,7 +44,7 @@ try {
       infoSection.appendChild(bracelet);
 
       const price = document.createElement('p');
-      price.textContent = `Price: ${watch.price}`;
+      price.textContent = `Price: $${watch.price}`;
       infoSection.appendChild(price);
 
       const year = document.createElement('p');
@@ -56,9 +56,11 @@ try {
 
       const sellButton = document.createElement('button');
       sellButton.textContent = 'Sell';
+      sellButton.classList.add('sell-btn');
+      sellButton.setAttribute('data-id', watch._id);  // Ensure each sell button has the correct data-id attribute
       sellButtonDiv.appendChild(sellButton);
-      const editButton = document.createElement('button');
 
+      const editButton = document.createElement('button');
       editButton.textContent = 'Edit';
       editButton.classList.add('edit-btn');  
       editButton.addEventListener('click', () => loadEditModal(watch));
@@ -171,6 +173,11 @@ document.getElementById('editWatchForm').onsubmit = async function(e) {
       console.error('Error updating watch:', err);
   }
 };
+var closeEditBtn = document.getElementsByClassName('close-edit-btn')[0];
+
+closeEditBtn.onclick = function() {
+    document.getElementById('editWatchModal').style.display = 'none';
+}
 
 document.querySelectorAll('.sell-btn').forEach(button => {
   button.addEventListener('click', function() {
@@ -203,6 +210,24 @@ document.querySelector('.close').addEventListener('click', function() {
   document.getElementById('sellModal').style.display = 'none';
 });
 
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('sell-btn')) {
+        const watchId = event.target.getAttribute('data-id');
+        document.getElementById('confirmSell').setAttribute('data-id', watchId); // Set the watch ID on the confirm button
+        document.getElementById('sellModal').style.display = 'block';
+    }
+});
+document.getElementById('watchPrice').addEventListener('input', function(e) {
+  var value = e.target.value;
+
+  if (!value.startsWith('$')) {
+      value = '$' + value.replace(/[^0-9.]/g, ''); // Remove any character that is not a digit or decimal point
+  } else {
+      value = '$' + value.slice(1).replace(/[^0-9.]/g, ''); // Slice the string to skip the first character and clean the rest
+  }
+
+  e.target.value = value; // Set the cleaned value back to the input
+});
 
 window.onclick = function(event) {
 if (event.target == editModal) {

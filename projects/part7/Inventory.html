@@ -37,6 +37,8 @@
                   <label for="watchImage">Image:</label>
                   <input type="file" id="watchImage" name="image" accept="image/*" required>
 
+                  <br>
+                  <br>
                   <label for="watchName">Name:</label>
                   <input type="text" id="watchName" name="name" required>
 
@@ -50,7 +52,7 @@
                   <input type="text" id="watchBracelet" name="bracelet" required>
 
                   <label for="watchPrice">Price:</label>
-                  <input type="text" id="watchPrice" name="price" required pattern="^\$\d+(,\d{3})*(\.\d{2})?$" title="Price format: $XX.XX">
+                  <input type="text" id="watchPrice" name="price" placeholder="$" required>
 
                   <label for="watchYear">Year:</label>
                   <input type="number" id="watchYear" name="year" required min="1900" max="2099" step="1">
