@@ -41,18 +41,33 @@ body {
     text-align: center;
   }
 
+
+
 #SearchedWatches {
-    display: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
-#SearchedWatches img{
+
+.watch {
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.watch img {
   width: 100px;
-  height: 100px;
-}
-#searchedWatch {
-    text-align: center;
-    border: 2px black solid;
-    margin: 20px;
-    padding: 10px;
+  height: auto;
+  margin-right: 20px;
 }
 
+.watch-details {
+  display: flex;
+  flex-direction: column;
+}
 
+.watch-details h3, .watch-details p {
+  margin: 5px 0;
+}
