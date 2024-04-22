@@ -64,17 +64,23 @@ app.post('/watches', upload.single('image'), async (req, res) => {
 });
 
 app.put('/watches/:id', upload.single('image'), async (req, res) => {
-    const { name, dialColor, material, bracelet, year, image } = req.body;
-    let { price } = req.body;
+    let updateData = {
+        name: req.body.name,
+        dialColor: req.body.dialColor,
+        material: req.body.material,
+        bracelet: req.body.bracelet,
+        price: parseFloat(req.body.price),
+        year: parseInt(req.body.year, 10)
+    };
 
-    price = parseFloat(price.replace(/[^\d.]/g, ''));
-
-    const updateData = { name, dialColor, material, bracelet, price, year, image: req.file ? req.file.path : null };
+    if (req.file) {
+        updateData.image = req.file.path;
+    }
 
     try {
         const watch = await Watch.findByIdAndUpdate(req.params.id, updateData, { new: true });
         if (!watch) {
-            return res.status(404).json({ message: "Watch not found" });
+            return res.status(404).send("Watch not found");
         }
         res.json(watch);
     } catch (err) {
@@ -96,6 +102,20 @@ app.delete('/watches/:id', async (req, res) => {
         res.status(500).send(err.message);
     }
 });
+
+app.delete('/watches/:id', async (req, res) => {
+    try {
+        const result = await Watch.findByIdAndDelete(req.params.id);
+        if (!result) {
+            return res.status(404).send('Watch not found');
+        }
+        res.send('Watch deleted successfully');
+    } catch (err) {
+        console.error(err);
+        res.status(500).send(err.message);
+    }
+});
+
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {

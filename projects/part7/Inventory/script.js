@@ -20,7 +20,7 @@ try {
       watchEl.classList.add('inventoryWatch');
 
       const img = document.createElement('img');
-      img.src = watch.img_name; 
+      img.src = watch.image; 
       img.alt = `Image of ${watch.name}`;
       watchEl.appendChild(img);
 
@@ -124,6 +124,10 @@ document.getElementById('addWatchForm').onsubmit = async function(e) {
 };
 
 function loadEditModal(watch) {
+  if (!watch._id) {
+    console.error('Invalid watch ID:', watch._id);
+    return; 
+  }
   document.getElementById('editWatchId').value = watch._id;
   document.getElementById('editWatchName').value = watch.name;
   document.getElementById('editWatchMaterial').value = watch.material;
@@ -141,9 +145,14 @@ document.getElementById('editWatchForm').onsubmit = async function(e) {
   const formData = new FormData(form);
 
   let price = formData.get('price').replace(/[^\d.]/g, '');
-  formData.set('price', price);  
+  formData.set('price', price);
 
-  const watchId = formData.get('editWatchId'); 
+  const watchId = document.getElementById('editWatchId').value; // Ensure this is not null or 'undefined'
+
+  if (!watchId) {
+    console.error('Invalid or missing watch ID');
+    return;  // Do not submit if ID is invalid
+  }
 
   try {
       const response = await fetch(`/watches/${watchId}`, {
@@ -159,9 +168,40 @@ document.getElementById('editWatchForm').onsubmit = async function(e) {
           throw new Error('Failed to update watch');
       }
   } catch (err) {
-      console.error(err.message);
+      console.error('Error updating watch:', err);
   }
 };
+
+document.querySelectorAll('.sell-btn').forEach(button => {
+  button.addEventListener('click', function() {
+      const watchId = this.getAttribute('data-id');  // Ensure each button has a data-id attribute
+      document.getElementById('confirmSell').setAttribute('data-id', watchId); // Set the watch ID on the confirm button
+      document.getElementById('sellModal').style.display = 'block';
+  });
+});
+
+document.getElementById('confirmSell').addEventListener('click', function() {
+  const watchId = this.getAttribute('data-id');
+  fetch(`/watches/${watchId}`, {
+      method: 'DELETE'
+  })
+  .then(response => response.json())
+  .then(data => {
+      console.log('Watch deleted:', data);
+      document.getElementById('sellModal').style.display = 'none';
+      displayWatches();  // Refresh the list of watches
+  })
+  .catch(error => console.error('Error deleting watch:', error));
+});
+
+document.getElementById('cancelSell').addEventListener('click', function() {
+  document.getElementById('sellModal').style.display = 'none';
+});
+
+// Close the modal if the user clicks the X span
+document.querySelector('.close').addEventListener('click', function() {
+  document.getElementById('sellModal').style.display = 'none';
+});
 
 
 window.onclick = function(event) {
