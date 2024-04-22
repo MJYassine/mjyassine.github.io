@@ -1,3 +1,7 @@
 # Exclude from build
 exclude:
   - node_modules/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
