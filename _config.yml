@@ -1,5 +1,10 @@
-# Exclude from build
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Exclude build files and directories
 exclude:
   - node_modules/
   - vendor/
-  - README.md
+  - Gemfile
+  - Gemfile.lock
